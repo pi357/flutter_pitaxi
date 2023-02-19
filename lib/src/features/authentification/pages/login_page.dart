@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pitaxi/src/features/home/home.dart';
 
 import '../../../common_widgets/common_widgets.dart';
 
@@ -48,10 +49,16 @@ class _LoginPageState extends State<LoginPage> {
                       obscureText: true,
                     ),
                     SizedBox(height: 40),
-                    Icon(
-                      Icons.login,
-                      color: Colors.white,
-                      size: 60,
+
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                      },
+                      child : Icon(
+                        Icons.login,
+                        color: Colors.white,
+                        size: 60,
+                      ),
                     ),
                     SizedBox(height: 40),
                     Text(
