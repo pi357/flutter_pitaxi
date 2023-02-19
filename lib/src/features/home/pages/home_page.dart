@@ -27,6 +27,16 @@ class _HomePageState extends State<HomePage> {
                   urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                   userAgentPackageName: 'com.example.app',
                 ),
+                MarkerLayer(
+                  markers: [
+                    Marker(
+                      point: LatLng(5.341789, -4.003140),
+                      width: 80,
+                      height: 80,
+                      builder: (context) => Image.asset('assets/images/marker.png'),
+                    ),
+                  ],
+                ),
               ],
             ),
             Positioned(
@@ -61,13 +71,8 @@ class _HomePageState extends State<HomePage> {
                 width: 70,
                 height: 70,
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/pi_background.jpg"),
-                    fit: BoxFit.fill
-                  )
-                ),
-                margin:  EdgeInsets.only(top: 8.0),
+                    shape: BoxShape.circle, image: DecorationImage(image: AssetImage("assets/images/pi_background.jpg"), fit: BoxFit.fill)),
+                margin: EdgeInsets.only(top: 8.0),
               ),
             ),
           ],
