@@ -17,16 +17,24 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.menu,
-          size: 60,
-          color: Colors.black,
+        leading: Builder(
+          builder: (context) => IconButton(
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            icon: Icon(
+              Icons.menu,
+              size: 60,
+              color: Colors.black,
+            ),
+          ),
         ),
         title: Container(
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-              shape: BoxShape.circle, image: DecorationImage(image: AssetImage("assets/images/pi_background.jpg"), fit: BoxFit.fill)),
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                  image: AssetImage("assets/images/pi_background.jpg"),
+                  fit: BoxFit.fill)),
         ),
         centerTitle: true,
         actions: [
@@ -36,6 +44,47 @@ class _HomePageState extends State<HomePage> {
             color: Colors.black,
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Profile"),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.maps_ugc),
+                    title: Text("Trips"),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.report),
+                    title: Text("Report"),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.money_rounded),
+                    title: Text("Earning"),
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [Text("Checking Out", style: TextStyle(fontSize: 22),),
+                SizedBox(width: 10,),
+                 Icon(Icons.logout)],
+              ),
+            )
+          ],
+        ),
       ),
       body: FlutterMap(
         options: MapOptions(
