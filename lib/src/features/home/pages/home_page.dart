@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [Text("Checking Out", style: TextStyle(fontSize: 22),),
-                SizedBox(width: 10,),
+                SizedBox(width: 10 ,),
                  Icon(Icons.logout)],
               ),
             )
