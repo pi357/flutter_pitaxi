@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pitaxi/src/features/home/home.dart';
+import 'package:flutter_pitaxi/src/features/rides/pages/pages.dart';
+import 'package:flutter_pitaxi/src/features/rides/pages/receive.dart';
 import 'package:flutter_pitaxi/src/features/splash/pages/pages.dart';
 
 void main() {
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: SplashPage(),
-      home: HomePage(),
+      home: ReceivePage(),
     );
   }
 }
