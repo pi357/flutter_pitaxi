@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_pitaxi/src/features/arrived_waiting/pages/arrived_waiting_page.dart';
 import 'package:flutter_pitaxi/src/features/home/home.dart';
 import 'package:flutter_pitaxi/src/features/rides/pages/pages.dart';
 import 'package:flutter_pitaxi/src/features/rides/pages/receive.dart';
 import 'package:flutter_pitaxi/src/features/splash/pages/pages.dart';
+import 'package:flutter_pitaxi/src/features/the_way/pages/on_the_way_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
